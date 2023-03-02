@@ -1,21 +1,36 @@
 <script>
+
+import axios from 'axios';
+
 export default {
    name: 'AppMain',
    data() {
       return {
          post: [],
          loading: false,
-         urlAddress: '',
+         urlAddress: 'http://127.0.0.1:8000/api/posts',
       }
    },
 
    methods: {
-      
+      getPost(){
+         axios.get(this.urlAddress,{
+            params: {
+
+            }
+         })
+         .then(function (response) {
+            console.log(response);
+         })
+         .catch(function (error) {
+            console.warn(error);
+         });
+      }
    },
 
 
    created() {
-      
+      this.getPost();
    },
 }
 </script>
