@@ -6,21 +6,21 @@ export default {
    name: 'AppMain',
    data() {
       return {
-         post: [],
+         posts: [],
          loading: false,
          urlAddress: 'http://127.0.0.1:8000/api/posts',
       }
    },
 
    methods: {
-      getPost(){
+      getPosts(){
          axios.get(this.urlAddress,{
             params: {
 
             }
          })
-         .then(function (response) {
-            console.log(response);
+         .then((response) => {
+            this.posts = response.data.results.data;
          })
          .catch(function (error) {
             console.warn(error);
@@ -30,7 +30,7 @@ export default {
 
 
    created() {
-      this.getPost();
+      this.getPosts();
    },
 }
 </script>
@@ -43,8 +43,13 @@ export default {
          <div class="row">
             <div class="col-12">
                <h1>
-                  Hello
+                  Post:
                </h1>
+
+               
+               <article class="col-6 single-post" v-for="post in posts" >
+                  {{ post.title }}
+               </article>
             </div>
          </div>
       </div>
