@@ -18,7 +18,10 @@ export default{
 <template>
 
     <AppHeader/>
-    <router-view></router-view>
+
+    <main class="container pt-3">
+      <router-view></router-view>
+    </main>
 
 </template>
 
