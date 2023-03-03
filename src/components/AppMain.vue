@@ -48,13 +48,21 @@ export default {
             
             <div class="container d-flex flex-wrap">
                <article class="col-6 single-post   card" v-for="post in posts" >
-                        <img :src="post.image" alt="">
+                           <h3>
+                              {{ post.author }}
+                           </h3>
+                           <p>
+                           {{ post.type.name }}
+                           </p>
+                        <img :src="post.image" alt="" class="card-img-top">
                      <div class="card-body">
                         <h5 class="card-title">{{post.title}}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                         <p class="card-text">{{ post.content }}</p>
+                        <p class="card-text">{{ post.post_date }}</p>
+                        <h3 v-for="technology in post.technologies" >
+                           {{ technology.name }}
+                        </h3>
                         <a href="#" class="card-link">Card link</a>
-                        <a href="#" class="card-link">Another link</a>
                      </div>
                </article>
             </div>
