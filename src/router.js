@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomePage from './pages/HomePage.vue';
 import AboutUs from './pages/AboutUs.vue';
 import PostsList from './pages/PostsList.vue';
+import SinglePost from './pages/SinglePost.vue';
+
 
    const router = createRouter({
    history: createWebHistory(),
@@ -21,6 +23,12 @@ import PostsList from './pages/PostsList.vue';
       name: 'posts',
       component: PostsList
       },
+      {
+         path: '/SinglePosts',
+         name: 'SinglePosts',
+         component: SinglePost
+    },
+      
    ]
 });
 export { router };

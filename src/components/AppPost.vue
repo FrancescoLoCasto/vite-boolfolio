@@ -36,7 +36,6 @@ export default {
                         <h3 v-for="technology in post.technologies" >
                            {{ technology.name }}
                         </h3>
-                        <a href="#" class="card-link">Card link</a>
                      </div>
                </article>
 </template>
