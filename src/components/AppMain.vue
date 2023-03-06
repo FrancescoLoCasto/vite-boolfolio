@@ -62,7 +62,7 @@ export default {
                         <h3 v-for="technology in post.technologies" >
                            {{ technology.name }}
                         </h3>
-                        <a href="" class="btn btn-primary">Read more...</a>
+
                      </div>
                </article>
             </div>

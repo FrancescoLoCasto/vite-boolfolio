@@ -37,7 +37,7 @@ export default {
                            {{ technology.name }}
                         </h3>
                         <a href="#" class="btn btn-primary">Read more...</a>
-                        <router-link v-if="!isShow" :to="{name: 'post', params: {slug: post.slug}}" class="btn btn-primary">
+                        <router-link :to="{name: 'post', params: {slug: post.slug}}" class="btn btn-primary">
                            Read more...
                         </router-link>
                      </div>

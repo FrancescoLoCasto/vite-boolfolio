@@ -25,7 +25,7 @@ export default {
          })
          .then((response) => {
             this.post = response.data.results;
-            console.log(response)
+            console.log(this.post)
          })
          .catch(function (error) {
             console.warn(error);

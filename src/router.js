@@ -24,10 +24,10 @@ import SinglePost from './pages/SinglePost.vue';
       component: PostsList
       },
       {
-         path: '/post',
+         path: '/posts/:slug',
          name: 'post',
          component: SinglePost
-    },
+     },
       
    ]
 });
