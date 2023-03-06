@@ -29,7 +29,7 @@ export default {
                   <router-link class="nav-link active" aria-current="page" :to="{name: 'about-us'}"> 
                      AboutUs
                   </router-link> 
-                  <router-link class="nav-link active" aria-current="page" :to="{name: 'SinglePosts'}"> 
+                  <router-link class="nav-link active" aria-current="page" :to="{name: 'post'}"> 
                      SinglePost
                   </router-link> 
                </div>

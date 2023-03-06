@@ -24,8 +24,8 @@ import SinglePost from './pages/SinglePost.vue';
       component: PostsList
       },
       {
-         path: '/SinglePosts',
-         name: 'SinglePosts',
+         path: '/post',
+         name: 'post',
          component: SinglePost
     },
       

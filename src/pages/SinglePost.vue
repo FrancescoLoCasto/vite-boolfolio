@@ -12,20 +12,20 @@ export default {
       return {
          post: null,
          loading: false,
-         urlAddress: 'http://127.0.0.1:8000/api/posts',
+         urlAddress: 'http://127.0.0.1:8000',
       }
    },
 
    methods: {
       getPost(){
-         axios.get(this.urlAddress,{
+         axios.get(this.urlAddress + `/api/posts/${this.$route.params.slug}`,{
             params: {
-
+               
             }
          })
          .then((response) => {
             this.post = response.data.results;
-            console.warn(response)
+            console.log(response)
          })
          .catch(function (error) {
             console.warn(error);

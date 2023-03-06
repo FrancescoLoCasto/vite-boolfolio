@@ -8,13 +8,13 @@ export default {
       return {
          posts: [],
          loading: false,
-         urlAddress: 'http://127.0.0.1:8000/api/posts',
+         urlAddress: 'http://127.0.0.1:8000',
       }
    },
 
    methods: {
       getPosts(){
-         axios.get(this.urlAddress,{
+         axios.get(this.urlAddress + '/api/posts/',{
             params: {
 
             }
@@ -62,7 +62,7 @@ export default {
                         <h3 v-for="technology in post.technologies" >
                            {{ technology.name }}
                         </h3>
-                        <a href="#" class="card-link">Card link</a>
+                        <a href="" class="btn btn-primary">Read more...</a>
                      </div>
                </article>
             </div>

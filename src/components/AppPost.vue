@@ -36,6 +36,10 @@ export default {
                         <h3 v-for="technology in post.technologies" >
                            {{ technology.name }}
                         </h3>
+                        <a href="#" class="btn btn-primary">Read more...</a>
+                        <router-link v-if="!isShow" :to="{name: 'post', params: {slug: post.slug}}" class="btn btn-primary">
+                           Read more...
+                        </router-link>
                      </div>
                </article>
 </template>
